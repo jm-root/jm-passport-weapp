@@ -1,0 +1,66 @@
+openapi: 3.0.0
+# Added by API Auto Mocking Plugin
+servers:
+# Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/jammacn/jm-passport-miniapp/1.0.0
+info:
+  version: "1.0.0"
+  title: jm-passport-miniapp-api
+  description: 通行证系统API(微信公众号)
+paths:
+  /login:
+    post:
+      responses:
+        '200':
+          description: 登陆成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenInfo'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginInfo'
+  /login/{openid}:
+    post:
+      parameters:
+        - name: openid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 登陆成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenInfo'
+components:
+  schemas:
+    LoginInfo:
+      type: object
+      properties:
+        code:
+          type: string
+      description: code
+    TokenInfo:
+      type: object
+      properties:
+        id:
+          type: string
+          example: '596d5cb3baeeaf00203de4ec'
+        token:
+          type: string
+          example: '3a90dd3a53914eae857793297738574a85ae74e5914fce723b9dc82d562a31cf'
+        expire:
+          type: integer
+          format: int32
+          example: 3600
+        time:
+          type: integer
+          format: int64
+          example: 1524634308844
+      description: Token信息
