@@ -7,7 +7,7 @@ servers:
 info:
   version: "1.0.0"
   title: jm-passport-miniapp-api
-  description: 通行证系统API(微信公众号)
+  description: 通行证系统API(微信小程序)
 paths:
   /login:
     post:
