@@ -1,7 +1,7 @@
 {
-  "name": "jm-passport-miniapp",
+  "name": "jm-passport-weapp",
   "version": "1.0.0",
-  "description": "passport service for miniapp",
+  "description": "passport service for weapp",
   "main": "./lib/index",
   "scripts": {
     "start": "jm-server",
@@ -10,20 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jm-root/jm-passport-miniapp.git"
+    "url": "https://github.com/jm-root/jm-passport-weapp.git"
   },
   "keywords": [
     "javascript",
-    "jm-passport-miniapp"
+    "jm-passport-weapp"
   ],
   "author": {
     "name": "Jeff YU"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jm-root/jm-passport-miniapp/issues"
+    "url": "https://github.com/jm-root/jm-passport-weapp/issues"
   },
-  "homepage": "https://github.com/jm-root/jm-passport-miniapp",
+  "homepage": "https://github.com/jm-root/jm-passport-weapp",
   "dependencies": {
     "jm-dao": "^1.0.5",
     "jm-server": "^1.0.3"

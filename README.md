@@ -1,8 +1,8 @@
-# jm-passport-miniapp
+# jm-passport-weapp
 
-passport service for miniapp
+passport service for weapp
 
-依赖 jm-miniapp jm-user jm-sso
+依赖 jm-weapp jm-user jm-sso
 
 ## 配置参数
 

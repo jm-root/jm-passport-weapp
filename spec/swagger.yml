@@ -3,10 +3,10 @@ openapi: 3.0.0
 servers:
 # Added by API Auto Mocking Plugin
   - description: SwaggerHub API Auto Mocking
-    url: https://virtserver.swaggerhub.com/jammacn/jm-passport-miniapp/1.0.0
+    url: https://virtserver.swaggerhub.com/jammacn/jm-passport-weapp/1.0.0
 info:
   version: "1.0.0"
-  title: jm-passport-miniapp-api
+  title: jm-passport-weapp-api
   description: 通行证系统API(微信小程序)
 paths:
   /login:
