@@ -10,4 +10,6 @@ passport service for weapp
 
 gateway Gateway服务器Uri
 
+weapp_uri weapp服务Uri, 相对于gateway, 例如 /weapp
+
 db 数据库uri
