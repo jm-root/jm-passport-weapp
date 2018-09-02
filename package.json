@@ -1,6 +1,6 @@
 {
   "name": "jm-passport-weapp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "passport service for weapp",
   "main": "./lib/index",
   "scripts": {
