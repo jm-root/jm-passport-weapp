@@ -45,7 +45,11 @@ components:
       properties:
         code:
           type: string
-      description: code
+        iv:
+          type: string
+        encryptedData:
+          type: string
+      description: 登陆信息
     TokenInfo:
       type: object
       properties:
