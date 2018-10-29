@@ -4,7 +4,8 @@ var config = {
     debug: true,
     lng: 'zh_CN',
     port: 3000,
-    gateway: 'http://gateway.jamma.cn',
+    force_unionid: 1,
+    gateway: 'http://gateway.test.jamma.cn',
     modules: {
       'passport': {
         module: process.cwd() + '/lib'
