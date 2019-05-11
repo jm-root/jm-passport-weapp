@@ -1,5 +1,8 @@
 # History
 
+## 1.0.5 / 2019-05-11
+- bind and unbind
+
 ## 1.0.1 / 2018-07-16
 - config: weapp_uri
 
