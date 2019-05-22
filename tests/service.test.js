@@ -13,11 +13,15 @@ beforeAll(async () => {
   id = doc.originalId || doc.id
 })
 
-test('login', async () => {
-  let doc = await service.login({ code: '123' })
-  console.log(doc)
-  expect(doc.err).toBeTruthy()
+afterAll(async () => {
+  await service.wechatUser.remove({ unionid })
 })
+
+// test('login', async () => {
+//   let doc = await service.login({ code: '123' })
+//   console.log(doc)
+//   expect(doc.err).toBeTruthy()
+// })
 
 test('bind', async () => {
   let doc = await service.bind(id, bindId)
@@ -30,5 +34,7 @@ test('bind', async () => {
 test('unbind', async () => {
   let doc = await service.unbind(id)
   console.log(doc)
-  expect(doc).toBeTruthy()
+  let doc2 = await service.signon({ unionid, headimgurl: 'http://www.baidu.com' })
+  console.log(doc2)
+  expect(!doc2.originalId).toBeTruthy()
 })
