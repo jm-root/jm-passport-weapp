@@ -1,9 +1,6 @@
 openapi: 3.0.0
-# Added by API Auto Mocking Plugin
 servers:
-# Added by API Auto Mocking Plugin
-  - description: SwaggerHub API Auto Mocking
-    url: https://virtserver.swaggerhub.com/jammacn/jm-passport-weapp/1.0.0
+  - url: https://gateway.jamma.cn/passport/weapp
 info:
   version: "1.0.0"
   title: jm-passport-weapp-api
