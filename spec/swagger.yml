@@ -38,6 +38,71 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TokenInfo'
+  /isbind/{id}:
+    get:
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 是否绑定了账户
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BindInfo'
+  /isbinded/{bindId}:
+    get:
+      parameters:
+        - name: bindId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 是否被绑定
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BindInfo'
+  /bind/{id}:
+    get:
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: bindId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 绑定
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BindInfo'
+  /unbind/{id}:
+    get:
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 解除绑定
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BindInfo'
 components:
   schemas:
     LoginInfo:
@@ -68,3 +133,13 @@ components:
           format: int64
           example: 1524634308844
       description: Token信息
+    BindInfo:
+      type: object
+      properties:
+        id:
+          type: string
+          example: '596d5cb3baeeaf00203de4ec'
+        bindId:
+          type: string
+          example: '596d5cb3baeeaf00203deabc'
+      description: 账户绑定信息

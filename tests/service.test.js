@@ -24,8 +24,20 @@ afterAll(async () => {
 // })
 
 test('bind', async () => {
-  let doc = await service.bind(id, bindId)
+  let doc = await service.isbinded(bindId)
+  expect(!doc.id).toBeTruthy()
+  doc = await service.bind(id, bindId)
   console.log(doc)
+  // isbinded
+  doc = await service.isbinded(bindId)
+  expect(doc.id).toBeTruthy()
+  // bind duplicate, should throw error
+  try {
+    await service.bind(id, bindId)
+  } catch (e) {
+    console.log(e)
+  }
+
   let doc2 = await service.signon({ unionid, headimgurl: 'http://www.baidu.com' })
   console.log(doc2)
   expect(bindId === doc2.id && id === doc2.originalId).toBeTruthy()
